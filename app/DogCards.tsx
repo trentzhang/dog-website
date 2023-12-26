@@ -66,7 +66,7 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
 
 export default function DogCards() {
   return (
-    <motion.div layout className="gap-2 flex flex-wrap ">
+    <motion.div layout className="gap-2 flex flex-wrap justify-center">
       {dogData.map((item, index) => (
         <DogCard item={item} key={index} />
       ))}
