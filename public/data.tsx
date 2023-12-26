@@ -1,3 +1,7 @@
+export const email = "me@somewhere.com";
+export const subject = "Interested Pet";
+export const body = "Hi, I am interested in this pet.";
+
 export const dogData = [
   {
     id: 1,

@@ -18,8 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="">
+      <body
+        className={
+          inter.className +
+          " min-h-screen flex  flex-col items-center justify-between px-48"
+        }
+      >
         <Providers>
           <Header />
           {children}

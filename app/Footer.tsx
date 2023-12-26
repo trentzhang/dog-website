@@ -1,6 +1,8 @@
+import { email } from "@/public/data";
+
 export default function Footer() {
   return (
-    <footer className="bg-white rounded-lg shadow m-4 dark:bg-gray-800 ">
+    <footer className="bg-white rounded-lg shadow  dark:bg-gray-800  m-4">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2023{" "}
@@ -26,7 +28,7 @@ export default function Footer() {
             </a>
           </li> */}
           <li>
-            <a href="#" className="hover:underline">
+            <a href={`mailto:${email}`} className="hover:underline">
               Contact
             </a>
           </li>
