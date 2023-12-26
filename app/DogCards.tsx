@@ -22,11 +22,14 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
             <Image
               isBlurred
               isZoomed
-              shadow="sm"
+              shadow="lg"
               radius="lg"
               //   width="100%"
               alt={item.name}
-              className="w-[240px] object-cover h-[240px]"
+              className={
+                "w-[240px] object-cover " +
+                (isExpanded ? "h-[284px]" : "h-[240px]")
+              }
               src={item.image}
             />
           </motion.div>
@@ -61,50 +64,12 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
   );
 }
 
-function DogCardExpanded({ item }: { item: (typeof dogData)[0] }) {
-  //  Expanded DogCard with item.name, item.price, item.image, item.description
-  return (
-    <Card
-      className="w-full"
-      shadow="sm"
-      isPressable
-      onPress={() => console.log("item pressed")}
-    >
-      <CardBody className="overflow-visible p-0 flex-row gap-3 ">
-        <div className="">
-          <Image
-            isBlurred
-            isZoomed
-            shadow="sm"
-            radius="lg"
-            // className="object-fit"
-            height={100}
-            alt={item.name}
-            src={item.image}
-          />
-        </div>
-        <div className="flex-col ">
-          <div className="flex gap-6">
-            <b>{item.name}</b>
-            <p className="text-default-500">${item.price}</p>
-          </div>
-          {/* <p>{item.description}</p> */}
-        </div>
-      </CardBody>
-      {/* <CardFooter className="text-small justify-between">
-        <b>{item.name}</b>
-        <p className="text-default-500">${item.price}</p>
-      </CardFooter> */}
-    </Card>
-  );
-}
 export default function DogCards() {
   return (
     <motion.div layout className="gap-2 flex flex-wrap ">
       {dogData.map((item, index) => (
         <DogCard item={item} key={index} />
       ))}
-      <DogCardExpanded item={dogData[0]} />
     </motion.div>
   );
 }
