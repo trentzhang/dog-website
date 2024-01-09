@@ -1,7 +1,5 @@
 "use client";
 import {
-  Button,
-  Card,
   Link,
   Navbar,
   NavbarBrand,
@@ -10,11 +8,8 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-  menu,
 } from "@nextui-org/react";
 import { useState } from "react";
-import { FaPhone } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,14 +41,20 @@ export default function Header() {
         <NavbarBrand>
           {/* <AcmeLogo /> */}
 
-          <p className="font-bold text-inherit text-2xl"> Paw Hills</p>
+          <p className="font-bold text-inherit text-4xl font-cursive">
+            {" "}
+            Paw Hills
+          </p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent
+        className="hidden sm:flex gap-4  font-cursive"
+        justify="center"
+      >
         {menuItems.map((item, index) => (
           <NavbarItem key={index}>
-            <Link color="foreground" href={item.href}>
+            <Link color="foreground" href={item.href} className="text-2xl">
               {item.name}
             </Link>
           </NavbarItem>

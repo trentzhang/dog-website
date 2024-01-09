@@ -2,10 +2,12 @@ import { Image } from "@nextui-org/react";
 
 export default function AboutUs() {
   return (
-    <section className="my-8 max-w-5xl  scroll-mt-40" id="about-us">
-      <div>
-        <img src="logo.png" className="w-full" alt="logo" />
-      </div>
+    <section
+      className="my-8 max-w-5xl  scroll-mt-40 flex-col items-center justify-center"
+      id="about-us"
+    >
+      <Image src="logo.png" className="" alt="logo" />
+
       {/* 
       <div className="absolute">
         <Image src="logo.png" className="w-full" alt="logo" />

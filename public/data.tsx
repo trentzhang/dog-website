@@ -11,6 +11,30 @@ export const socialMediaLink = {
   email: "mailto:pawhillseattle@gmail.com",
   phone: "tel:425-503-6169",
 };
+
+export const breedImages = [
+  {
+    name: "Luca",
+    description: "cream color, 25lb, Miniature Poodle",
+    src: ["dog-images/Luca 1.jpg", "dog-images/Luca 2.jpg"],
+  },
+  {
+    name: "Moon",
+    description: "golden color, 20lb, cocker spaniel",
+    src: ["dog-images/Moon 1.jpg", "dog-images/Moon 2.jpg"],
+  },
+  {
+    name: "Owen",
+    description: "golden color,90lb,champion bloodline golden retriever",
+    src: ["dog-images/Owen 1.jpg", "dog-images/Owen 2.jpg"],
+  },
+  {
+    name: "Mia",
+    description: "golden color, 70lb,champion bloodline golden retriever",
+    src: ["dog-images/Mia 1.jpg", "dog-images/Mia 2.jpg"],
+  },
+];
+
 export const listOfDogEssentialImages = [
   {
     src: "/essentials/Dog bed.jpg",
@@ -53,35 +77,59 @@ export const listOfDogEssentialImages = [
 export const dogData = [
   {
     id: 1,
-    name: "Bulldog",
-    image: "/dog-images/bulldog.webp",
+    name: "Blue Boy",
+    image: "/puppy/blue boy.jpg",
     description:
-      "The Bulldog, also known as the English Bulldog or British Bulldog, is a medium-sized dog breed. It is a muscular, hefty dog with a wrinkled face and a distinctive pushed-in nose.",
-    price: 500,
+      "Luca and Moon proudly welcomed a delightful Cockapoo litter on 12/11/2023, comprising 3 handsome boys and 4 adorable girls.",
+    price: 3500,
   },
   {
     id: 2,
-    name: "Pug",
-    image: "/dog-images/Pug.jpg",
+    name: "Green Girl",
+    image: "/puppy/green girl.jpg",
     description:
-      "The Pug is a breed of dog distinguished by a wrinkly, short-muzzled face and curled tail. The breed has a fine, glossy coat that comes in a variety of colors, most often fawn or black, and a compact square body with well-developed muscles.",
-    price: 600,
+      "Luca and Moon proudly welcomed a delightful Cockapoo litter on 12/11/2023, comprising 3 handsome boys and 4 adorable girls.",
+    price: 3500,
   },
   {
     id: 3,
-    name: "Golden Retriever",
-    image: "/dog-images/Golden Retriever.jpg",
+    name: "Orange Girl",
+    image: "/puppy/orange girl.jpg",
     description:
-      "The Golden Retriever is a medium-large gun dog that was bred to retrieve shot waterfowl, such as ducks and upland game birds, during hunting and shooting parties.",
-    price: 700,
+      "Luca and Moon proudly welcomed a delightful Cockapoo litter on 12/11/2023, comprising 3 handsome boys and 4 adorable girls.",
+    price: 3500,
   },
   {
     id: 4,
-    name: "German Shepherd",
-    image: "/dog-images/German Shepherd.webp",
+    name: "Purple Boy",
+    image: "/puppy/purple boy.jpg",
     description:
-      "The German Shepherd is a breed of medium to large-sized working dog that originated in Germany. In the English language, the breed's officially recognized name is German Shepherd Dog.",
-    price: 800,
+      "Luca and Moon proudly welcomed a delightful Cockapoo litter on 12/11/2023, comprising 3 handsome boys and 4 adorable girls.",
+    price: 3500,
+  },
+  {
+    id: 5,
+    name: "Red Boy",
+    image: "/puppy/redy boy.jpg",
+    description:
+      "Luca and Moon proudly welcomed a delightful Cockapoo litter on 12/11/2023, comprising 3 handsome boys and 4 adorable girls.",
+    price: 3500,
+  },
+  {
+    id: 6,
+    name: "Skyblue Girl",
+    image: "/puppy/skyblue girl.jpg",
+    description:
+      "Luca and Moon proudly welcomed a delightful Cockapoo litter on 12/11/2023, comprising 3 handsome boys and 4 adorable girls.",
+    price: 3500,
+  },
+  {
+    id: 7,
+    name: "Yellow Girl",
+    image: "/puppy/yellow girl.jpg",
+    description:
+      "Luca and Moon proudly welcomed a delightful Cockapoo litter on 12/11/2023, comprising 3 handsome boys and 4 adorable girls.",
+    price: 3500,
   },
   //   {
   //     id: 5,

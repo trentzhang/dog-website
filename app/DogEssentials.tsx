@@ -7,7 +7,7 @@ export default function DogEssentials() {
   //   );
 
   return (
-    <section className="my-8" id="dog-essentials">
+    <section className="my-8 max-w-[1200px]" id="dog-essentials">
       <h2 className="text-3xl font-bold mb-6 text-center font-cursive">
         Beginner Guide
       </h2>

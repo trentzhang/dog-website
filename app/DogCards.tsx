@@ -59,9 +59,6 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
 export default function DogCards() {
   return (
     <section className="my-8">
-      <h2 className="text-3xl font-bold mb-6 text-center font-cursive">
-        Image Gallery
-      </h2>
       <motion.div
         layout
         className="gap-2 grid grid-cols-1 xl:grid-cols-2"
