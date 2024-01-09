@@ -1,26 +1,29 @@
 import Link from "next/link";
 import DogCards from "./DogCards";
 
-export default function Home() {
-  return (
-    <div className="grow flex  flex-col items-center justify-between px-48 min-h-[70vh]">
-      <section className="my-8" id="about-us">
-        <h2 className="text-2xl font-bold mb-4">About Us</h2>
-        <p className="text-gray-700">
-          Welcome to Dog Sale Paradise, your go-to destination for finding the
-          perfect canine companion. Our mission is to connect loving families
-          with happy and healthy dogs. At Dog Sale Paradise, we carefully select
-          and showcase a variety of breeds, ensuring that each dog is raised
-          with care and love.
-        </p>
-        <p className="text-gray-700 mt-4">
-          Whether you&apos;re looking for a playful puppy or a loyal companion,
-          our diverse range of dogs is sure to meet your preferences. We believe
-          in responsible breeding practices and prioritize the well-being of our
-          dogs.
-        </p>
-      </section>
+import React, { Children } from "react";
+import path from "path";
+import { promises as fs } from "fs";
+import AboutUs from "./AboutUs";
+import ContactUs from "./ContactUs";
+// const importAll = (r: any) => r.keys().map(r);
 
+// const imageContext = require.context(
+//   "@public/puppy",
+//   false,
+//   /\.(png|jpe?g|svg)$/
+// );
+
+// const images = importAll(imageContext);
+
+export default async function Home() {
+  //   const relativeImageDirectory = "public/puppy";
+  //   const imageDirectory = path.join(process.cwd(), relativeImageDirectory);
+  //   const imageFilenames = await fs.readdir(imageDirectory);
+  //   console.log(imageFilenames);
+  return (
+    <div className=" flex  flex-col items-center justify-between min-h-[70vh] px-5 sm:px-10 md:px-30 ">
+      <AboutUs />
       <section className="text-center m-24">
         <p className="text-gray-700">Ready to find your new best friend?</p>
         <div
@@ -32,6 +35,8 @@ export default function Home() {
       </section>
 
       <DogCards />
+
+      <ContactUs />
     </div>
   );
 }

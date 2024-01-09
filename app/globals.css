@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-hex: #000000;
   --background-start-hex: #ffffff;
   --background-end-hex: #fdedd3;
@@ -20,4 +20,4 @@ html {
   color: var(--foreground-hex);
   background: linear-gradient(to bottom, transparent, var(--background-end-hex))
     var(--background-start-hex);
-}
+} */

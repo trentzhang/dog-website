@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={
           inter.className +
-          " min-h-screen flex  flex-col items-center justify-between px-48"
+          " min-h-screen flex  flex-col items-center justify-between "
         }
       >
         <Providers>

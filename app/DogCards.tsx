@@ -6,53 +6,11 @@ import { use, useEffect, useState } from "react";
 import NextImage from "next/image";
 import { ScrollShadow } from "@nextui-org/react";
 function DogCard({ item }: { item: (typeof dogData)[0] }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const [isClicked, setIsClicked] = useState(false);
-
-  const [isHovered, setIsHovered] = useState(false);
-
-  const [isFixed, setIsFixed] = useState(false);
-
-  //   useEffect(() => {
-  //     if (isHovered) {
-  //       setIsExpanded(true);
-  //     } else {
-  //       setIsExpanded(false);
-  //     }
-  //   }, [isHovered]);
-
   return (
-    <motion.div
-      layout
-      transition={{ duration: 0.1 }}
-      onHoverStart={() => {
-        if (isFixed) return;
-        // setIsExpanded(true);
-        // setIsHovered(true);
-      }}
-      onHoverEnd={() => {
-        if (isFixed) return;
-        // setIsExpanded(false);
-        // if (!isClicked && isHovered) {
-        //   // delay setting isExpanded to false so that the user can click on the card
-        // setTimeout(() => {
-        //   setIsExpanded(false);
-        // }, 300);
-      }}
-    >
-      <Card
-        shadow="sm"
-        isPressable
-        onPress={() => {
-          console.log("item pressed");
-          setIsExpanded(!isExpanded);
-          //   setIsClicked(!isClicked);
-          //   setIsFixed(!isFixed);
-        }}
-      >
+    <motion.div>
+      <Card shadow="sm">
         <CardBody className="overflow-visible p-0  flex-col md:flex-row gap-3 items-center md:items-start">
-          <motion.div>
+          <motion.div className="pt-8 md:pt-0">
             <Image
               isBlurred
               isZoomed
@@ -60,21 +18,20 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
               radius="lg"
               //   width="100%"
               alt={item.name}
-              className={
-                "w-[240px] object-cover " +
-                (isExpanded ? "h-[284px]" : "h-[240px]")
-              }
+              className={"w-[240px] object-cover h-[284px]"}
               src={item.image}
             />
           </motion.div>
           {/* <AnimatePresence mode="wait"> */}
-          {isExpanded ? (
-            <ScrollShadow className="h-[284px] p-6 max-w-sm gap-4 flex flex-col">
-              <div className="flex gap-6 ">
-                <b>{item.name}</b>
-                <p className="text-default-500">${item.price}</p>
-              </div>
-              <p>{item.description}</p>
+
+          <ScrollShadow className="h-[284px] p-6 max-w-sm gap-4 flex flex-col">
+            <div className="flex gap-6 ">
+              <b>{item.name}</b>
+              <p className="text-default-500">${item.price}</p>
+            </div>
+            <p>{item.description}</p>
+
+            <Button className="bg-pink-100/50">
               <a
                 href={`mailto:${email}?subject=${subject}&body=${
                   body +
@@ -85,24 +42,15 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
                   "%0D%0A" +
                   item.description
                 }`}
-                className="text-primary-500"
+                className="text-pink-800"
               >
-                <Button color="primary" variant="ghost">
-                  Email Us
-                </Button>
+                Email Us
               </a>
-            </ScrollShadow>
-          ) : null}
+            </Button>
+          </ScrollShadow>
+
           {/* </AnimatePresence> */}
         </CardBody>
-        {isExpanded ? null : (
-          <motion.div className="w-full">
-            <CardFooter className="text-small justify-between items-center">
-              <b>{item.name}</b>
-              <p className="text-default-500 ">${item.price}</p>
-            </CardFooter>
-          </motion.div>
-        )}
       </Card>
     </motion.div>
   );
@@ -110,14 +58,17 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
 
 export default function DogCards() {
   return (
-    <motion.div
-      layout
-      className="gap-2 flex flex-wrap justify-center"
-      id="dogs"
-    >
-      {dogData.map((item, index) => (
-        <DogCard item={item} key={index} />
-      ))}
-    </motion.div>
+    <section className="my-8">
+      <h2 className="text-3xl font-bold mb-6 text-center">Image Gallery</h2>
+      <motion.div
+        layout
+        className="gap-2 grid grid-cols-1 xl:grid-cols-2"
+        id="dogs"
+      >
+        {dogData.map((item, index) => (
+          <DogCard item={item} key={index} />
+        ))}
+      </motion.div>
+    </section>
   );
 }

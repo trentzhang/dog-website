@@ -1,6 +1,7 @@
 "use client";
 import {
   Button,
+  Card,
   Link,
   Navbar,
   NavbarBrand,
@@ -11,6 +12,8 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/react";
 import { useState } from "react";
+import { FaPhone } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +33,7 @@ export default function Header() {
     // "Log Out",
   ];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} shouldHideOnScroll maxWidth="lg">
+    <Navbar onMenuOpenChange={setIsMenuOpen} shouldHideOnScroll>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -38,8 +41,8 @@ export default function Header() {
         />
         <NavbarBrand>
           {/* <AcmeLogo /> */}
-          Dog
-          <p className="font-bold text-inherit">Website</p>
+
+          <p className="font-bold text-inherit text-2xl"> Paw Hills</p>
         </NavbarBrand>
       </NavbarContent>
 
@@ -54,22 +57,13 @@ export default function Header() {
             Dogs
           </Link>
         </NavbarItem>
-        {/* <NavbarItem>
-          <Link color="foreground" href="#">
-            Others
-          </Link>
-        </NavbarItem> */}
-      </NavbarContent>
-      {/* <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
+          <Link color="foreground" href="#contact-us">
+            Contact Us
+          </Link>
         </NavbarItem>
-      </NavbarContent> */}
+      </NavbarContent>
+
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
