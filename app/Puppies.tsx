@@ -17,22 +17,21 @@ export function Puppies() {
       >
         Explore Dogs
       </div>
-      <p className="text-gray-700 font-cursive text-2xl">
+      <p className="text-gray-700 font-cursive text-2xl mb-10">
         Our breeding dogs: Luca, Mia, Owen & Moon
       </p>
       <div>
         {breedImages.map((item, index) => {
           return (
             <div key={index}>
-              <h3 className="text-xl font-bold mb-6 text-center font-cursive">
-                {item.name}:{item.description}
-              </h3>
-
               <div className="flex items-center justify-center gap-3">
                 {item.src.map((s, ind) => (
                   <Image key={ind} src={s} alt="dog" className="w-[400px] " />
                 ))}
               </div>
+              <h3 className="text-xl font-bold mb-6 text-center font-cursive">
+                {item.name}:{item.description}
+              </h3>
             </div>
           );
         })}
@@ -40,7 +39,7 @@ export function Puppies() {
 
       <div className="max-w-5xl text-gray-700"></div>
 
-      <p className="text-gray-700 font-cursive text-2xl">
+      <p className="text-gray-700 font-cursive text-3xl mt-8">
         Ready to find your new best friend?
       </p>
 
