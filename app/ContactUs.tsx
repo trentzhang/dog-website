@@ -7,7 +7,9 @@ import { MdEmail } from "react-icons/md";
 export default function ContactUs() {
   return (
     <section className="my-8 max-w-5xl scroll-mt-40" id="contact-us">
-      <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
+      <h2 className="text-3xl font-bold mb-6 text-center font-cursive">
+        Contact Us
+      </h2>
       {/* <p className="text-gray-700 py-5">
         We are here 24/7 for your <u>puppies</u>. Feel free to reach out to us
         through any of the following channels:
