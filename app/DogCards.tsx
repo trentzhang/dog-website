@@ -58,12 +58,8 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
 
 export default function DogCards() {
   return (
-    <section className="my-8">
-      <motion.div
-        layout
-        className="gap-2 grid grid-cols-1 xl:grid-cols-2"
-        id="dogs"
-      >
+    <section className="my-8" id="puppy-ies">
+      <motion.div layout className="gap-2 grid grid-cols-1 xl:grid-cols-2">
         {dogData.map((item, index) => (
           <DogCard item={item} key={index} />
         ))}

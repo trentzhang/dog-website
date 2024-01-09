@@ -17,7 +17,7 @@ export default function Header() {
   const menuItems = [
     { name: "About Us", href: "#about-us" },
     { name: "Our Dogs", href: "#our-dogs" },
-    { name: "Puppies", href: "#puppies" },
+    { name: "Puppies", href: "#puppy-ies" },
     { name: "Beginner Guide", href: "#dog-essentials" },
     { name: "Contact Us", href: "#contact-us" },
     // "Profile",
@@ -65,13 +65,14 @@ export default function Header() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
+              //   color={
+              //     index === 2
+              //       ? "primary"
+              //       : index === menuItems.length - 1
+              //       ? "danger"
+              //       : "foreground"
+              //   }
+              color="foreground"
               className="w-full"
               href={item.href}
               size="lg"

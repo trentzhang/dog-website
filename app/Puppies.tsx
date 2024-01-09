@@ -4,10 +4,7 @@ import { Image } from "@nextui-org/react";
 
 export function Puppies() {
   return (
-    <section
-      className="text-center my-12 scroll-mt-40 items-center justify-center flex flex-col"
-      id="puppies"
-    >
+    <section className="text-center my-12 scroll-mt-40 items-center justify-center flex flex-col">
       <h2 className="text-3xl font-bold  text-center font-cursive">
         Image Gallery
       </h2>
@@ -17,7 +14,7 @@ export function Puppies() {
       >
         Explore Dogs
       </div>
-      <p className="text-gray-700 font-cursive text-2xl mb-10">
+      <p className="text-gray-700 font-cursive text-2xl mb-10" id="our-dogs">
         Our breeding dogs: Luca, Mia, Owen & Moon
       </p>
       <div>
@@ -36,8 +33,6 @@ export function Puppies() {
           );
         })}
       </div>
-
-      <div className="max-w-5xl text-gray-700"></div>
 
       <p className="text-gray-700 font-cursive text-3xl mt-8">
         Ready to find your new best friend?
