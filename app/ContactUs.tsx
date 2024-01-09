@@ -1,3 +1,4 @@
+import { socialMediaLink } from "@/public/data";
 import { Card } from "@nextui-org/react";
 import { CiInstagram } from "react-icons/ci";
 import { FaPhone } from "react-icons/fa6";
@@ -5,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function ContactUs() {
   return (
-    <section className="my-8 max-w-5xl" id="contact-us">
+    <section className="my-8 max-w-5xl scroll-mt-40" id="contact-us">
       <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
       {/* <p className="text-gray-700 py-5">
         We are here 24/7 for your <u>puppies</u>. Feel free to reach out to us
@@ -14,7 +15,7 @@ export default function ContactUs() {
       <div className="flex justify-center gap-5">
         <Card className="w-10 h-10 items-center justify-center p-2">
           <a
-            href="https://www.instagram.com/"
+            href={socialMediaLink.instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -23,7 +24,7 @@ export default function ContactUs() {
         </Card>
         <Card className="w-10 h-10 items-center justify-center p-2">
           <a
-            href="https://www.instagram.com/"
+            href={socialMediaLink.facebook}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -32,7 +33,7 @@ export default function ContactUs() {
         </Card>
         <Card className="w-10 h-10 items-center justify-center p-2">
           <a
-            href="https://www.instagram.com/"
+            href={socialMediaLink.tiktok}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,13 +41,17 @@ export default function ContactUs() {
           </a>
         </Card>
         <Card className="w-10 h-10 items-center justify-center p-2">
-          <a href="tel:425-503-6169" target="_blank" rel="noopener noreferrer">
+          <a
+            href={socialMediaLink.phone}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaPhone />
           </a>
         </Card>
         <Card className="w-10 h-10 items-center justify-center p-2 text-xl">
           <a
-            href="mailto:pawhillseattle@gmail.com"
+            href={socialMediaLink.email}
             target="_blank"
             rel="noopener noreferrer"
           >

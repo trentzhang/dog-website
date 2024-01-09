@@ -10,6 +10,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
+  menu,
 } from "@nextui-org/react";
 import { useState } from "react";
 import { FaPhone } from "react-icons/fa6";
@@ -19,8 +20,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    "Dogs",
-    "Contact Us",
+    { name: "About Us", href: "#about-us" },
+    { name: "Puppies", href: "#puppies" },
+    { name: "Contact Us", href: "#contact-us" },
     // "Profile",
     // "Dashboard",
     // "Activity",
@@ -33,7 +35,7 @@ export default function Header() {
     // "Log Out",
   ];
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} shouldHideOnScroll>
+    <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -47,21 +49,13 @@ export default function Header() {
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#about-us">
-            About Us
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#dogs" aria-current="page">
-            Dogs
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#contact-us">
-            Contact Us
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item, index) => (
+          <NavbarItem key={index}>
+            <Link color="foreground" href={item.href}>
+              {item.name}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       <NavbarMenu>
@@ -76,10 +70,10 @@ export default function Header() {
                   : "foreground"
               }
               className="w-full"
-              href="#"
+              href={item.href}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}

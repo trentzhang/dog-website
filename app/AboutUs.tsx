@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <section className="my-8 max-w-5xl" id="about-us">
+    <section className="my-8 max-w-5xl  scroll-mt-40" id="about-us">
       <h2 className="text-3xl font-bold mb-6 text-center">About Us</h2>
       <p className="text-gray-700">
         Paw Hills is a family breeding enterprise located in Buckley,
