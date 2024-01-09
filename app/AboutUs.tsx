@@ -6,7 +6,7 @@ export default function AboutUs() {
       className="my-8 max-w-5xl  scroll-mt-40 flex-col items-center justify-center"
       id="about-us"
     >
-      <Image src="logo.png" className="" alt="logo" />
+      <Image src="logo.png" className="w-full" alt="logo" />
 
       {/* 
       <div className="absolute">
