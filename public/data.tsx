@@ -3,10 +3,11 @@ export const subject = "Interested Pet";
 export const body = "Hi, I am interested in this pet.";
 
 export const socialMediaLink = {
-  facebook: "https://www.facebook.com/",
-  instagram: "https://www.instagram.com/",
-  twitter: "https://twitter.com/",
-  tiktok: "https://www.tiktok.com/",
+  facebook:
+    "https://www.facebook.com/profile.php?id=61554787088263&mibextid=9R9pXO",
+  instagram:
+    "https://www.instagram.com/pawhillseattle?igsh=ZGNjOWZkYTE3MQ%3D%3D&utm_source=qr",
+  tiktok: "https://www.tiktok.com/@paw.hills?_t=8isjjwpMvYE&_r=1",
   email: "mailto:pawhillseattle@gmail.com",
   phone: "tel:425-503-6169",
 };

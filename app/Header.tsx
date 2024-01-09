@@ -21,7 +21,9 @@ export default function Header() {
 
   const menuItems = [
     { name: "About Us", href: "#about-us" },
+    { name: "Our Dogs", href: "#our-dogs" },
     { name: "Puppies", href: "#puppies" },
+    { name: "Beginner Guide", href: "#dog-essentials" },
     { name: "Contact Us", href: "#contact-us" },
     // "Profile",
     // "Dashboard",

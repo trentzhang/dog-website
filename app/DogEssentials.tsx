@@ -7,8 +7,10 @@ export default function DogEssentials() {
   //   );
 
   return (
-    <section className="my-8">
-      <h2 className="text-3xl font-bold mb-6 text-center">Dog Essentials</h2>
+    <section className="my-8" id="dog-essentials">
+      <h2 className="text-3xl font-bold mb-6 text-center font-cursive">
+        Beginner Guide
+      </h2>
       <div className="flex flex-wrap gap-10 justify-center">
         {/* {listOfImages.map((item, index) => {
           return (

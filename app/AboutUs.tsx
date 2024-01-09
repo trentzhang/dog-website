@@ -1,7 +1,18 @@
+import { Image } from "@nextui-org/react";
+
 export default function AboutUs() {
   return (
     <section className="my-8 max-w-5xl  scroll-mt-40" id="about-us">
-      <h2 className="text-3xl font-bold mb-6 text-center">About Us</h2>
+      <div>
+        <img src="logo.png" className="w-full" alt="logo" />
+      </div>
+      {/* 
+      <div className="absolute">
+        <Image src="logo.png" className="w-full" alt="logo" />
+      </div> */}
+      <h2 className="text-3xl font-bold mb-6 text-center font-cursive">
+        About Us
+      </h2>
       <p className="text-gray-700">
         Paw Hills is a family breeding enterprise located in Buckley,
         Washington, just 45 minutes away from downtown Seattle. Our primary goal
