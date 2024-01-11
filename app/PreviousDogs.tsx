@@ -12,14 +12,14 @@ const images = importAll(imageContext);
 
 console.log("images", images[0].default);
 const PreviousDogs: React.FC = () => (
-  <div className="carousel rounded-box gap-3 mt-8">
+  <div className="carousel rounded-box gap-3 mt-8 w-[80vw]">
     {images.map((image: any, index: any) => (
       <div className="carousel-item " key={index}>
         <Image
           isZoomed
           src={image.default.src}
           alt={`Image ${index}`}
-          className="object-cover w-full h-96"
+          className="object-cover  h-96"
         />
       </div>
     ))}
