@@ -31,7 +31,7 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
             </div>
             <p>{item.description}</p>
 
-            <Button className="bg-pink-100/50">
+            {/* <Button className="bg-pink-100/50">
               <a
                 href={`mailto:${email}?subject=${subject}&body=${
                   body +
@@ -46,7 +46,7 @@ function DogCard({ item }: { item: (typeof dogData)[0] }) {
               >
                 Email Us
               </a>
-            </Button>
+            </Button> */}
           </ScrollShadow>
 
           {/* </AnimatePresence> */}

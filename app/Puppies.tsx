@@ -1,6 +1,7 @@
 import { breedImages } from "@/public/data";
 import DogCards from "./DogCards";
 import { Image } from "@nextui-org/react";
+import PreviousDogs from "./PreviousDogs";
 
 export function Puppies() {
   return (
@@ -39,6 +40,12 @@ export function Puppies() {
       </p>
 
       <DogCards />
+
+      <p className="text-gray-700 font-cursive text-3xl mt-8">
+        Our previous puppies
+      </p>
+
+      <PreviousDogs />
     </section>
   );
 }
