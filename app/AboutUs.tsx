@@ -15,7 +15,7 @@ export default function AboutUs() {
       <h2 className="text-3xl font-bold mb-6 text-center font-cursive">
         About Us
       </h2>
-      <p className="text-gray-700">
+      <p className="">
         Paw Hills is a family breeding enterprise located in Buckley,
         Washington, just 45 minutes away from downtown Seattle. Our primary goal
         is to create an exceptional living environment for dogs and facilitate
@@ -32,7 +32,7 @@ export default function AboutUs() {
         facilities with weekly disinfection protocols, along with nutritionally
         balanced diets, to ensure their overall health and happiness.
       </p>
-      <p className="text-gray-700 mt-4">
+      <p className=" mt-4">
         Driven by our passion for canines, we are continually expanding our
         knowledge on dog behavior training techniques, proper feeding practices,
         and grooming methods, constantly refining our theoretical understanding

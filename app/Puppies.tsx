@@ -15,7 +15,7 @@ export function Puppies() {
       >
         Explore Dogs
       </div>
-      <p className="text-gray-700 font-cursive text-2xl mb-10" id="our-dogs">
+      <p className=" font-cursive text-2xl mb-10" id="our-dogs">
         Our breeding dogs: Luca, Mia, Owen & Moon
       </p>
       <div>
@@ -35,15 +35,13 @@ export function Puppies() {
         })}
       </div>
 
-      <p className="text-gray-700 font-cursive text-3xl mt-8">
+      <p className="font-cursive text-3xl mt-8">
         Ready to find your new best friend?
       </p>
 
       <DogCards />
 
-      <p className="text-gray-700 font-cursive text-3xl mt-8">
-        Our previous puppies
-      </p>
+      <p className="font-cursive text-3xl mt-8">Our previous puppies</p>
 
       <PreviousDogs />
     </section>
